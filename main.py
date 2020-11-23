@@ -3,21 +3,19 @@ from espn_api.football import League
 
 # Init
 config = configparser.RawConfigParser()
-config.read('sample.ini')
+config.read('rob.ini')
 league = League(league_id=int(config["League"]["LeagueId"]),
                 year=int(config["League"]["SeasonId"]),
                 espn_s2=config["League"]["Espn_S2"],
-                swid=config["League"]["Swid"],
-                debug=True)
+                swid=config["League"]["Swid"])
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {league.least_scorer()}')  # Press ⌘F8 to toggle the breakpoint.
+def print_team_and_roster():
+    for team in league.teams:
+        print(team.owner + " " + str(team.points_for))
+        for player in team.roster:
+            print("-- " + player.name)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print_team_and_roster()
