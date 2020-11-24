@@ -1,7 +1,7 @@
 rob.ini
 mike.ini
 /venv/
-
+/__pycache__/
 # base ignore form  https://raw.githubusercontent.com/github/gitignore/master/Global/JetBrains.gitignore
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839

@@ -1,5 +1,6 @@
 import configparser
 from espn_api.football import League
+from mikrut_scale import mikrut_scale
 
 # Init
 config = configparser.RawConfigParser()
@@ -12,10 +13,9 @@ league = League(league_id=int(config["League"]["LeagueId"]),
 
 def print_team_and_roster():
     for team in league.teams:
-        print(team.owner + " " + str(team.points_for))
-        for player in team.roster:
-            print("-- " + player.name)
-
-
+        print(team.owner + " " + str(mikrut_scale(league, team.team_id)))
+        #print(team.owner + " " + str(team.points_for))
+        # for player in team.roster:
+        #     print("-- " + player.name)
 
 print_team_and_roster()
