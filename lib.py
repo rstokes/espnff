@@ -25,5 +25,6 @@ def build_scores(league):
             scores[week].append(team.scores[week])
     # sort all scores
     for week in range(get_num_weeks(league)):
+        # sort scores so highest score is last (highest index)
         scores[week].sort()
     return scores
