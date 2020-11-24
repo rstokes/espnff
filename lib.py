@@ -11,8 +11,7 @@ def get_num_weeks_zero_index(league):
 
 
 # Builds dictionary of all scores for each team
-# Dictionary Key is team id, value is the list of scores.
-# The index of the score is the zero based week number
+# Key is zero index week number, value is the list of scores for that week.
 # {
 #   0: [63.02, 66.4, 67.46, 71.4, 83.52, 93.24, 94.02, 99.5, 107.54, 109.1, 116.26, 117.18, 149.58],
 #   1: [57.24, 67.76, 82.18, 85.26, 99.88, 104.06, 104.16, 117.46, 120.22, 121.78, 133.9, 135.1, 139.02],
