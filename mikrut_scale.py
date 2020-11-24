@@ -1,8 +1,8 @@
 from collections import defaultdict
-from lib import get_num_weeks
+from lib import get_num_weeks, build_scores
 
 def mikrut_scale(league, team_id):
-    scores = __build_scores(league)
+    scores = build_scores(league)
     ranks = __get_ranks(league, scores)
     return ranks[team_id]
 
@@ -19,15 +19,3 @@ def __get_ranks(league, scores):
         ranks[team_id] = sum(ranks_list[team_id])
 
     return ranks
-
-
-def __build_scores(league):
-    scores = defaultdict(list)
-    # build map of all scores in each week
-    for week in range(get_num_weeks(league)):
-        for team in league.teams:
-            scores[week].append(team.scores[week])
-    # sort all scores
-    for week in range(get_num_weeks(league)):
-        scores[week].sort()
-    return scores
