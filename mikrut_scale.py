@@ -18,7 +18,6 @@ def __get_ranks(league, scores):
             # find index of score in week
             ranks_list[team.team_id].append(scores[week].index(team.scores[week]))
 
-    print(ranks_list)
     for team_id in ranks_list:
         ranks[team_id] = sum(ranks_list[team_id])
 
