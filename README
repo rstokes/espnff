@@ -1,12 +1,12 @@
-'''
+```
 pip install -r requirements.txt
-'''
+```
 
 Create your ini config file
 
-'''
+```
 python3 app.py
-'''
+```
 
 Dont check in your credentials!!!!!
 
