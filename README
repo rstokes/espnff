@@ -1,10 +1,10 @@
-```
+```shell
 pip install -r requirements.txt
 ```
 
 Create your ini config file
 
-```
+```shell
 python3 app.py
 ```
 
